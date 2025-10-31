@@ -1,6 +1,5 @@
-﻿@model IEnumerable<Comunidad_Conectada.Models.Persona>
-
-@{
+@model IEnumerable<Comunidad_Conectada.Models.Persona>
+﻿@{
     ViewData["Title"] = "Personas registradas";
 }
 
@@ -23,7 +22,7 @@
 }
 else
 {
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -51,3 +50,4 @@ else
         </tbody>
     </table>
 }
+
