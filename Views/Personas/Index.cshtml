@@ -36,16 +36,16 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var p in Model)
+            @foreach (var r in Model)
             {
                 <tr>
-                    <td>@p.ID</td>
-                    <td>@p.Nombre</td>
-                    <td>@p.Apellidos</td>
-                    <td>@p.Telefono</td>
-                    <td>@p.Email</td>
-                    <td>@p.Genero</td>
-                    <td>@p.Edad</td>
+                    <td>@r.ID</td>
+                    <td>@r.Nombre</td>
+                    <td>@r.Apellidos</td>
+                    <td>@r.Telefono</td>
+                    <td>@r.Email</td>
+                    <td>@r.Genero</td>
+                    <td>@r.Edad</td>
                 </tr>
             }
         </tbody>
