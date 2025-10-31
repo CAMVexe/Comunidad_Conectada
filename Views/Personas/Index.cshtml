@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Comunidad_Conectada.Models.Persona>
+
+@{
+    ViewData["Title"] = "Personas registradas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Mensaje"] is string msg)
+{
+    <div class="alert alert-success" role="alert" >
+        @msg
+    </div>
+}
+
+<p>
+    <a class="btn btn-primary" asp-action="Personas" asp-action="Create">Nueva persona</a>
+</p>
+
+@if (!Model.Any())
+{
+    <p>No hay personas registradas aun</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Telefono</th>
+                <th>Emal</th>
+                <th>Genero</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.ID</td>
+                    <td>@p.Nombre</td>
+                    <td>@p.Apellidos</td>
+                    <td>@p.Telefono</td>
+                    <td>@p.Email</td>
+                    <td>@p.Genero</td>
+                    <td>@p.Edad</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
