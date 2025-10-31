@@ -22,7 +22,7 @@ namespace Comunidad_Conectada.Controllers
         [HttpPost]
         public IActionResult Create(Persona model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
